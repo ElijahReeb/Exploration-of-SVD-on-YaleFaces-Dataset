@@ -1,4 +1,5 @@
-# UW-EE399-Assignment-2
+UW-EE399-Assignment-2
+=========
 This holds the code and backing for the second assignment of the EE399 class. It uses the 'yalefaces' dataset in order to demonstrate singular value decomposition (SVD).
 
 Project Author: Elijah Reeb, elireeb@uw.edu
@@ -21,15 +22,15 @@ After loading in the faces into a matrix, a quick dot product allows for one to 
         Xm=X[:, 0:nfaces]
         C=np.matmul(Xm.T,Xm)
 
-.. image:: ![image](https://user-images.githubusercontent.com/130190276/232985736-5ef9b74c-c460-4b69-98e1-9a9fc94d6423.png)
+.. image:: https://user-images.githubusercontent.com/130190276/232985736-5ef9b74c-c460-4b69-98e1-9a9fc94d6423.png
 
 This code produces a correlation matrix that allows us to see which two faces are closest mathematically as two (unitary) vectors are closest to the same when their dot product approaches 1. If observe the specific values we can plot the two faces that are closest and those furthest away. These turned out to be a face and itself (two closest faces were the same face) and the same for the furthest faces. These images are plotted below (only one shown to prevent redundancy). 
 
-.. image:: ![image](https://user-images.githubusercontent.com/130190276/232986635-40beaccd-d23e-48fb-a533-3070eed385e6.png)
+.. image:: https://user-images.githubusercontent.com/130190276/232986635-40beaccd-d23e-48fb-a533-3070eed385e6.png
 
 Looking at certain specific faces we can determine ones that are even closer together. When a subset of faces are compared it produces the following matrix. Notice the large correlation in the center. 
 
-.. image:: ![image](https://user-images.githubusercontent.com/130190276/232986883-1fd44f06-b268-4bcd-9758-db951b665604.png)
+.. image:: https://user-images.githubusercontent.com/130190276/232986883-1fd44f06-b268-4bcd-9758-db951b665604.png
 
 This use of linear algebra between the matricies shows a mathematically simple way to determine relation between images. But this can be expanded further as discussed below.
 
@@ -44,7 +45,7 @@ The principles of face correlation described above can be translated with more l
 
 After plotting the highest eigen vectors of these newly calculated arrays we can find the so called "eigenfaces" which hold certain measures that are common in all faces. The first 6 "eigenfaces" are plotted below. 
 
-![image](https://user-images.githubusercontent.com/130190276/232988008-b4cafae6-e503-42c7-8fb3-f5bfcd231dfc.png)
+.. image:: https://user-images.githubusercontent.com/130190276/232988008-b4cafae6-e503-42c7-8fb3-f5bfcd231dfc.png
 
 Furthering this, we can use the Single Value Decomposition (SVD) method in order to calculate something similar. Numpy's linalg package gives the simple svd command which allows a similar calculation to find the principle component directions of the face matrix. They are plotted below. 
 
@@ -52,7 +53,7 @@ Furthering this, we can use the Single Value Decomposition (SVD) method in order
 
         u,s,v=np.linalg.svd(X)
 
-..image:: ![image](https://user-images.githubusercontent.com/130190276/232988571-96514cca-5f52-43d7-8373-d4c7245062de.png)
+.. image:: https://user-images.githubusercontent.com/130190276/232988571-96514cca-5f52-43d7-8373-d4c7245062de.png
 
 Comparing these two sets of plots we can see similar characteristics emerge in the faces with face 3 appearing almost identical in the two methods. Due to slight different math behind these two calculations there is slight difference but that will be explained in the next section. 
 
