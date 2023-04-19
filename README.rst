@@ -72,4 +72,5 @@ As seen, the first mode covers a large percent of the variance with a large drop
 Summary and Conclusions
 ^^^^^^^^^^^^
 We can see that this method is not perfect in determining the variation between faces. It does however provide a mathematical system that a new face can be projected onto in order to determine how the feature spaces compare. This is a good test dataset, but the quality makes it difficult to see all of the different features of faces, however this provides a good starting point to observe the results of matrix manipulation to determine correlation. 
+
 To sum it up, the use of linear algebra through eigenvectors and dot products allows a simple mathematical way to compare images and determine relative correlation. These methods however are very reliant on front-end work such as cropping and centering the faces. If images do not have comparable features in comparable places then these mathematical technqiues will fail. We observed how with just a few SVD modes or eigenvectors a relatively large amount of the variance in the data can be captured. This method has promise to help become a building block for later algorithms. 
