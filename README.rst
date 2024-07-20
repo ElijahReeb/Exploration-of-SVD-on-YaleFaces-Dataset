@@ -2,7 +2,7 @@ Exploration of SVD on YaleFaces Dataset
 =========
 This holds the code and backing for the second assignment of the EE399 class. It uses the 'yalefaces' dataset in order to demonstrate singular value decomposition (SVD).
 
-Project Author: Elijah Reeb, elijahreeb@outlook.com
+Project Author: Elijah Reeb
 
 .. contents:: Table of Contents
 
